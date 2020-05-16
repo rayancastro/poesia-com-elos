@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  checkout_session_id: MyString
+  status: MyString
+  email: MyString
+
+two:
+  checkout_session_id: MyString
+  status: MyString
+  email: MyString

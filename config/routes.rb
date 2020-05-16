@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
+
+  scope :checkout do
+    get '/', to: 'payment#checkout', as: :checkout
+    get '/success', to: 'payment#success', as: :checkout_success
+    get '/error', to: 'payment#error', as: :checkout_error
+  end
 end

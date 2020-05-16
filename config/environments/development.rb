@@ -27,6 +27,8 @@ Rails.application.configure do
 
     config.cache_store = :null_store
   end
+  config.hosts << "ceb3795a.ngrok.io"
+  config.web_console.whitelisted_ips = "54.187.205.235"
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
