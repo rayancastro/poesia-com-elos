@@ -4,6 +4,7 @@ class PaymentController < ApplicationController
 
     # Atualizado para utilização da PRICES API
     @session = Stripe::Checkout::Session.create(
+      mode: 'subscription',
       payment_method_types: ['card'],
       line_items: [{
         price: subscription_plan,
