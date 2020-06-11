@@ -15,7 +15,7 @@
  */
 
 .full-body {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(0, 0, 0);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -31,7 +31,7 @@
   top: 100px;
   left: calc(50% - 190px);
   background-color: white;
-  box-shadow: 1px 2px 8px 0px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px -1px 2px 5px rgba(255, 255, 255, 0.6);
   margin: auto auto;
   display: flex;
   flex-direction: column;
@@ -39,6 +39,9 @@
   text-align: center;
 }
 
+body {
+  font-family: 'sans-serif';
+}
 p {
   font-size: 15px;
 }
