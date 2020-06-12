@@ -1,6 +1,6 @@
 class PaymentController < ApplicationController
   def checkout
-    subscription_plan = ENV['MONTHLY_STRIPE_PLAN']
+    subscription_plan = (params[:subscription] == 'anual' ? ENV['YEARLY_STRIPE_PLAN'] : ENV['MONTHLY_STRIPE_PLAN'])
 
     # Atualizado para utilização da PRICES API
     @session = Stripe::Checkout::Session.create(
